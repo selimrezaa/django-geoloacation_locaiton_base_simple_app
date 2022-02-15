@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+<h3>start here...</h3>
+{% if obj %}
+  <li>{{obj.location}}</li>
+  <form method="POST">
+    {{form|crispy}}
+    {% csrf_token %}
+    <br>
+    <button type="submit" name="button" class="btn btn-info">Send</button>
+  </form>
+
+  This product includes GeoLite2 data created by MaxMind, available from
+  <a href="https://www.maxmind.com">https://www.maxmind.com</a>.
+{% endif %}
+{% endblock %}

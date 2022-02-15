@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+<h3>Your Location </h3>
+<h5>Your ip {{data.query}}</h5>
+<h6>Country: {{data.country}}</h6>
+<h6>City: {{data.city}}</h6>
+<h6>Lat: {{data.lat}}</h6>
+<h6>Lon: {{data.lon}}</h6>
+<h6>Timezone: {{data.timezone}}</h6>
+<h6>Region: {{data.region}}</h6>
+<h6>Zip: {{data.zip}}</h6>
+
+<h1>Ip from current user : {{ip}}</h1>
+
+{{data}}
+
+{% endblock %}
